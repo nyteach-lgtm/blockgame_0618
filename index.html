@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>벽돌깨기</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <section class="game-panel" aria-label="벽돌깨기 게임">
+        <div class="topbar">
+          <div>
+            <p class="eyebrow">Arcade</p>
+            <h1>벽돌깨기</h1>
+          </div>
+          <div class="stats" aria-live="polite">
+            <span>점수 <strong id="score">0</strong></span>
+            <span>목숨 <strong id="lives">3</strong></span>
+            <span>레벨 <strong id="level">1</strong></span>
+          </div>
+        </div>
+
+        <div class="canvas-wrap">
+          <canvas id="game" width="960" height="600" aria-label="벽돌깨기 플레이 화면"></canvas>
+          <div class="overlay" id="overlay">
+            <div class="overlay-card">
+              <h2 id="overlayTitle">시작하기</h2>
+              <p id="overlayText">마우스, 터치, 방향키로 패들을 움직이고 공을 튕겨 모든 벽돌을 깨세요.</p>
+              <button id="startButton" type="button">플레이</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button id="pauseButton" type="button" title="일시정지">일시정지</button>
+          <button id="restartButton" type="button" title="처음부터 다시">다시 시작</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="./game.js"></script>
+  </body>
+</html>
